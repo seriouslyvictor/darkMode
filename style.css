@@ -1,0 +1,21 @@
+body {
+    color: #333;
+    background-color: #fefefe;
+}
+
+a {
+    color: darkblue;
+    text-decoration: none;
+}
+
+/* Dark mode começa aqui */
+
+.tema--escuro {
+    color: #fff;
+    background-color: #222;
+
+}
+
+.tema--escuro a {
+    color: orange;
+}
