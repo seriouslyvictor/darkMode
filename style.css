@@ -1,21 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    color: #333;
-    background-color: #fefefe;
+    font-family: Play, sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    max-width: 90rem;
+    margin: auto;
+    border: 2px solid rgba(128, 128, 128, 0.177);
+    border-radius: 25px;
 }
 
-a {
-    color: darkblue;
-    text-decoration: none;
+header {
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 5rem;
 }
 
-/* Dark mode começa aqui */
+main {
+    transition: 0.4s;
+    background-image: url(assets/light-br.png);
+    background-size: cover;
+    height: calc(100vh - 5rem - 3.75rem);
+}
 
-.tema--escuro {
-    color: #fff;
-    background-color: #222;
+
+
+footer {
+    display: grid;
+    place-items: center;
+    height: 3.75rem;
+}
+
+
+/* CSS do Toggle */
+
+.theme--toggle {
+    transition: 0.6s;
+    display: block;
+    width: 7.5rem;
+    height: 3rem;
+    border: 3px solid #E2E8F0;
+    cursor: pointer;
+    border-radius: 50px;
+    overflow: hidden;
+    padding: .5rem;
+    box-shadow: 0px 5px 9.2px 0px rgba(0, 0, 0, 0.25) inset;
+    position: relative;
+}
+
+#theme--toggle {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
 
 }
 
-.tema--escuro a {
-    color: orange;
+.round {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    transition: 0.4s ease-in-out;
+    display: inline-block;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    background-color: #FED32E;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 0px 4px #FEF3C7);
+}
+
+.light .theme--toggle {
+    background: url(assets/light__mode.jpg) lightgray 3.626px -2.604px / 161.478% 278.1% no-repeat;
+
+}
+
+/* Dark theme CSS */
+.dark {
+    background-color: var(--colors-slate-900, #0F172A);
+}
+
+.dark header,
+.dark footer {
+    color: var(--colors-slate-300, #CBD5E1)
+}
+
+.dark main {
+    background-image: url(assets/night-bg.png);
+}
+
+.dark .round {
+    background-color: var(--colors-base-white, #FFF);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 0px 3.6px rgba(248, 250, 252, 0.50));
+    transform: translateX(calc(100% + 2.25rem - 0.5rem)) translateY(-50%)
+}
+
+.dark .theme--toggle {
+    background: url(assets/night__mode.jpg) lightgray -14.804px -15.2px / 161.478% 278.1% no-repeat;
 }

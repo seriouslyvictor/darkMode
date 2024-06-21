@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Light and Dark Mode</title>
+    <title>Day and Night!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="darkmode.js" defer></script>
 </head>
-<body>
-    <!-- <button> Ativar modo escuro</button> -->
-    <img title="Alterna entre dark e light mode" src="icon-moon.svg" alt="Icone modo escuro">
-    <h1>Sou um título, sou gloriosamente grande!</h1>
 
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit illo eum cum facere, qui similique recusandae doloribus fuga, tempore officiis harum obcaecati maiores ipsam in fugiat quidem perferendis quia. Exercitationem!</p>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis officia deleniti maxime, minima voluptatem mollitia laudantium reiciendis consequuntur similique sed facere repellat sit inventore voluptas aut necessitatibus quibusdam eveniet veniam?</p>
+<body class="light">
+    <header>
+        <h1>Toggle de tema escuro/claro</h1>
+        <label for="theme--toggle" class="theme--toggle">
+            <input type="checkbox" name="theme--switch" id="theme--toggle">
+            <span class="shape round"></span>
+        </label>
+    </header>
+    <main></main>
+    <footer>Feito com 💖 para o curso de Front End!</footer>
 
-    <a href="#">Sou um link falso, não tenho utilidade</a>
-    
-    <script src="darkmode.js"></script>
+
 </body>
+
 </html>
